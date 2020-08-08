@@ -29,7 +29,7 @@ class Leetcode{
             if(s[start] != s[end]){
 
                 //case 1:
-                //delete start check for s[start+1 ... e+1]
+                //delete start check for s[start+1 ... e]
                 //or
                 //case 2:
                 //delete end check for s[start ... end-1]
