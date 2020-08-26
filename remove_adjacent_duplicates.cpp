@@ -10,7 +10,9 @@ i/p: MISSISSIPPI  o/p: M
 #include<bits/stdc++.h>
 using namespace std;
 class Leetcode{
-    public:
+
+    //method 1: T = O(n), S = O(n)
+    /*public:
     string remove_adjacent_duplicate(string s){
         stack<char> st;
         for (int i = 0; i < s.size(); i++)
@@ -28,7 +30,27 @@ class Leetcode{
         }
         reverse(ans.begin(), ans.end());
         return ans; 
+    }*/
+
+    //method 2: T = O(n), S = O(1)
+    public:
+    string remove_adjacent_duplicate(string s){
+        int stptr = -1;
+        for(int i = 0; i < s.size(); i++){
+            if(stptr == -1 || s[i] != s[stptr]){
+                stptr++;
+                s[stptr] = s[i];
+            } else{
+                stptr--;
+            }
+        }
+        string ans = "";
+        for (int i=0; i<=stptr; i++){
+            ans.push_back(s[i]);
+        }
+        return ans;
     }
+
 };
 
 int main(){
