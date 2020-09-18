@@ -8,7 +8,7 @@ using namespace std;
 //using array
 int storeallindex(int a[], int n, int x, int i, int positions[], int j){
     //arrays are passed by ref always
-    if(n == 0) return 0;
+    if(i == n) return 0;
 
     if(a[i] == x){
         positions[j] = i;
@@ -22,7 +22,7 @@ int storeallindex(int a[], int n, int x, int i, int positions[], int j){
 void storeallindex2(int a[], int n, int x, int i, vector<int> &positions){
     //passing vector by ref coz by default vector are passed by value
     //here it is passed by ref so that its values are reflected in vector inside
-    if(n == 0) return;
+    if(i == n) return;
 
     if(a[i] == x){
         positions.push_back(i);
