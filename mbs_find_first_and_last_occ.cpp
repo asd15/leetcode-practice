@@ -1,6 +1,10 @@
 //modified binary search tree
 //finding first and last occurance of
 //element x in a sorted array using binary search
+//
+//to find the num of occurence of x use formula
+//index of last - index of first + 1
+//
 
 #include<iostream>
 #include<vector>
